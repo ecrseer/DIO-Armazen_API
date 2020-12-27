@@ -30,7 +30,7 @@ namespace Armazen_API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Armazen_API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Armazen_--API", Version = "v1" });
             });
         }
 
