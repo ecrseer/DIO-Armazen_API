@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Elastico\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Elastico\\.nuget\\packages"
+    ]
+  }
+}

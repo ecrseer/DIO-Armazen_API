@@ -40,6 +40,7 @@ namespace Armazen_API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //middlewares
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Armazen_API v1"));
             }
