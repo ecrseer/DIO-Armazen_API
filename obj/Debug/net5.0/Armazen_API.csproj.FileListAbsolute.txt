@@ -162,3 +162,9 @@ D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\run
 D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\DIO_Armazen.dll
 D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\DIO_Armazen.pdb
 D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\xunit.abstractions.dll
+D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\xunit.assert.dll
+D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\xunit.core.dll
+D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\xunit.execution.dotnet.dll
+D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\Castle.Core.dll
+D:\Personal\code\code12-2020\studio\firstASPNET\Armazen_API\bin\Debug\net5.0\Moq.dll
