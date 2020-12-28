@@ -24,7 +24,7 @@ namespace Armazen_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Produto>>> Getprodutos()
         {
-            return await _context.produtos
+            return await _context.produtos.Include("utilitario")//equals not ignore case: search for json name
                 .ToListAsync();
         }
 
@@ -33,8 +33,8 @@ namespace Armazen_API.Controllers
         public async Task<ActionResult<Produto>> GetProduto(int id)
         {
             var produto = await _context.produtos
-                
-                .FindAsync(id);
+                .Include("utilitario").FirstOrDefaultAsync(prd=>prd.id==id);
+                //.FindAsync(id);
 
             if (produto == null)
             {
