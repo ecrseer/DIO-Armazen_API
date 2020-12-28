@@ -1,3 +1,4 @@
+using DIO_Armazen.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,7 @@ namespace Armazen_API
         {
 
             services.AddControllers();
+            services.AddDbContext<Context>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Armazen_--API", Version = "v1" });
