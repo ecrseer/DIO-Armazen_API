@@ -11,50 +11,47 @@ namespace Armazen_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProdutoesController : ControllerBase
+    public class UtilitariosController : ControllerBase
     {
         private readonly Context _context;
 
-        public ProdutoesController(Context context)
+        public UtilitariosController(Context context)
         {
             _context = context;
         }
 
-        // GET: api/Produtoes
+        // GET: api/Utilitarios
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Produto>>> Getprodutos()
+        public async Task<ActionResult<IEnumerable<Utilitario>>> GetUtilitarios()
         {
-            return await _context.produtos
-                .ToListAsync();
+            return await _context.Utilitarios.ToListAsync();
         }
 
-        // GET: api/Produtoes/5
+        // GET: api/Utilitarios/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Produto>> GetProduto(int id)
+        public async Task<ActionResult<Utilitario>> GetUtilitario(int id)
         {
-            var produto = await _context.produtos
-                
-                .FindAsync(id);
+            var utilitario = await _context.Utilitarios.FindAsync(id);
 
-            if (produto == null)
+            if (utilitario == null)
             {
                 return NotFound();
             }
 
-            return produto;
+            return utilitario;
         }
 
-        // PUT: api/Produtoes/5
+        // PUT: api/Utilitarios/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduto(int id, Produto produto)
+        public async Task<IActionResult> PutUtilitario(int id, Utilitario utilitario)
         {
-            if (id != produto.id)
+            if (id != utilitario.id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(produto).State = EntityState.Modified;
+            _context.Entry(utilitario).State = EntityState.Modified;
 
             try
             {
@@ -62,7 +59,7 @@ namespace Armazen_API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProdutoExists(id))
+                if (!UtilitarioExists(id))
                 {
                     return NotFound();
                 }
@@ -75,36 +72,36 @@ namespace Armazen_API.Controllers
             return NoContent();
         }
 
-        // POST: api/Produtoes
+        // POST: api/Utilitarios
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Produto>> PostProduto(Produto produto)
+        public async Task<ActionResult<Utilitario>> PostUtilitario(Utilitario utilitario)
         {
-            _context.produtos.Add(produto);
+            _context.Utilitarios.Add(utilitario);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProduto", new { id = produto.id }, produto);
+            return CreatedAtAction("GetUtilitario", new { id = utilitario.id }, utilitario);
         }
 
-        // DELETE: api/Produtoes/5
+        // DELETE: api/Utilitarios/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProduto(int id)
+        public async Task<IActionResult> DeleteUtilitario(int id)
         {
-            var produto = await _context.produtos.FindAsync(id);
-            if (produto == null)
+            var utilitario = await _context.Utilitarios.FindAsync(id);
+            if (utilitario == null)
             {
                 return NotFound();
             }
 
-            _context.produtos.Remove(produto);
+            _context.Utilitarios.Remove(utilitario);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool ProdutoExists(int id)
+        private bool UtilitarioExists(int id)
         {
-            return _context.produtos.Any(e => e.id == id);
+            return _context.Utilitarios.Any(e => e.id == id);
         }
     }
 }
