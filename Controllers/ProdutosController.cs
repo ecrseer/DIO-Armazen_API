@@ -11,11 +11,11 @@ namespace Armazen_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProdutoesController : ControllerBase
+    public class ProdutosController : ControllerBase
     {
         private readonly Context _context;
 
-        public ProdutoesController(Context context)
+        public ProdutosController(Context context)
         {
             _context = context;
         }
